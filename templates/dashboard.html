@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpeg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Admin Panel</h1>
+              <span class="subheading">welcome you are logged in</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        <h1>ULOAD POST</h1>
+        <a class="btn btn-primary float-right" href="/edit/0">Add a new post →</a>
+        <a class="btn btn-primary float-right" href="/logout">Logout →</a>
+        <a class="btn btn-primary float-right" href="/contact">Raise your Complaint →</a>
+          <div></div>
+          <hr>
+          <h1>UPLOAD A FILE</h1>
+
+          <form action="/uploader" method="post" enctype="multipart/form-data">
+            <input type="file" name="file1">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+          <hr>
+          <h1>EDIT POSTS</h1>
+          <hr>
+   <!-- Todo: Fetch it using for loop from the database -->
+         
+
+
+                  <!-- Pager -->
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sno</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for post in post %}
+                      <tr>
+                        <th scope="row">{{sno}}</th>
+                        <td>{{post.title}}</td>
+                        <td>{{post.date}}</td>
+                        <td><a class="btn btn-primary float-right" href="/edit/{{post.sno}}">Edit →</a></td>
+                        <td><a class="btn btn-primary float-right" href="/post/{{post.sno}}">Delete →</a></td>
+                      </tr>
+                     {% endfor %}
+                    </tbody>
+                  </table>
+        
+
+
+                  <hr>
+                  <h1>ACTIVE PROBLEMS </h1>
+                  <hr>
+           <!-- Todo: Fetch it using for loop from the database -->
+                 
+        
+        
+                          <!-- Pager -->
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">Sno</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Date</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            {% for contacts in contacts  %}
+                              <tr>
+                                <th scope="row">{{sno}}</th>
+                                <td>{{contacts.mes}}</td>
+                                <td>{{contacts.date}}</td>
+                                <td><a class="btn btn-primary float-right" href="/problem">Edit →</a></td>
+                              </tr>
+                             {% endfor %}
+                            </tbody>
+                          </table>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

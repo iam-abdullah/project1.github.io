@@ -1,0 +1,19 @@
+{
+    "params":
+    {   "local_server": "TRUE",
+        "local_uri": "mysql://root:@localhost/collegeproject1",
+        "prod_uri": "mysql://root:@localhost/collegeproject1",
+        "fb_url":"https://www.instagram.com/Udaanshiksha",
+        "tw_url": "https://twitter.com/Udaanshiksha",
+        "insta_url": "https://instagram.com/Udaanshiksha",
+        "blog_name": "Loknayak Jai Prakash Institute of Technology",
+        "tag_line": "Loknayak Jai Prakash Institute of Technology",
+        "gmail-user":"udaanshiksha@gmail.com",
+        "gmail-password":"nmk nchjs",
+        "no_of_posts": 5,
+        "login_image":"login.svg.jpeg",
+        "admin_user":"",
+        "admin_password":"abdul",
+        "upload_location": "C:\\Users\\ABC\\Desktop\\collegeproject\\PROJECT\\static\\assets\\img"
+    }
+}

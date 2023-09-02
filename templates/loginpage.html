@@ -1,0 +1,44 @@
+{%extends"layout.html"%}
+{% block body%}
+<body class="row">
+
+	<p></p>
+    <p></p>
+	<div class="container-fluid px-4">
+        <p></p>
+		
+		<div class="row">
+
+            <div class="col-xl-4">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body">Not Registers Yet</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a href="/signup" class="small text-white stretched-link">Signup Here</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-xl-4 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                     <div class="card-body">Already Registered</div>
+                     <div class="card-footer d-flex alignitem-center justify-content-between">
+                        <a href="/login" class="small text-white stretched-link">Login Here</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+			<div class="col-xl-4 col-md-6">
+                <div class="card bg-danger text-white mb-4">
+                    <div class="card-body">Admin Panel</div>
+                    <div class="card-footer d-flex alignitem-center justify-content-between">
+                        <a href="/login" class="small text-white stretched-link">Login Here</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</body>
+{% endblock %}  

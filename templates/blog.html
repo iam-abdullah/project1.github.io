@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+
+
+<div class="container text-container3">
+    <div class="row">
+      <div class="col-lg-12 col-md-10 mx-auto">
+
+
+   <!-- Todo: Fetch it using for loop from the database -->
+       {% for post in post %}
+       <div class="post-preview text-container3">
+        <a href="/post/{{post.slug}}">
+          <h2 class="post-title">
+              {{ post.title }}
+          </h2>
+          <h3 class="post-subtitle">{{post.tagline}}
+            
+          </h3>
+        </a>
+        <p class="post-meta">Posted by
+          <a href="#">Admin</a>
+          on {{post.date}}</p>
+      </div>
+      {{post.content[0:143]}}...
+      <div class="bard"></div>
+       </div>
+
+
+
+       
+        <!-- <div class="post-preview">
+          <a href="/post/{{post.slug}}">
+            <h2 class="post-title">
+                {{ post.title }}
+            </h2>
+            <h3 class="post-subtitle">{{post.tagline}}
+              
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">Admin</a>
+            on {{post.date}}</p>
+        </div>
+        {{post.content[0:143]}}...
+        <hr>
+      </li></a> -->
+
+
+      {% endfor %}
+
+                <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-left" href="{{prev}}">&larr;Previous Posts </a>
+          <a class="btn btn-primary float-right" href="{{next}}">Next Posts &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main><!-- End #main -->
+
+{% endblock %}
